@@ -1,18 +1,23 @@
 import { useState } from "react"
 import "./MiOrg.css"
 
-const MiOrg =() => {
-    console.log()
+const MiOrg =(props) => {
+    //Estado - hooks
+    //useState
+    //const [nombreVariable, funcionActualizada] = useState(valorInicial)
+    console.log(props)
 
-    const[nombre, actualizarNombre] = useState("lll")
 
-    const manejarClick = () => {
-        console.log("mostrar ocultar")
-    }
+    // const[mostrar, actualizarMostrar] = useState(true)
+
+    // const manejarClick = () => {
+    //     console.log("mostrar ocultar", !mostrar)
+    //     actualizarMostrar(!mostrar)
+    // }
 
     return <section className="orgSection">
-        <h3 className="title">Mi organización {nombre}</h3>
-        <img src="/img/add.png" onClick={manejarClick}/>
+        <h3 className="title">Mi organización</h3>
+        <img src="/img/add.png" alt="add" onClick={props.cambiarMostrar}/>
     </section>
 }
 
